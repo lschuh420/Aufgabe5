@@ -5,15 +5,17 @@
 -->
 <data-extraction-rules>
     <cloud-backup>
-        <!-- TODO: Use <include> and <exclude> to control what is backed up.
-        <include .../>
-        <exclude .../>
-        -->
+        <!-- Sichere nur wichtige Dateien -->
+        <include domain="file" path="user_data/"/>
+        <include domain="sharedpref" path="."/>
+        <!-- Temporäre Dateien nicht sichern -->
+
     </cloud-backup>
-    <!--
+
     <device-transfer>
-        <include .../>
-        <exclude .../>
+        <!-- Daten für den Gerätewechsel -->
+        <include domain="file" path="user_data/"/>
+        <include domain="sharedpref" path="settings.xml"/>
+
     </device-transfer>
-    -->
 </data-extraction-rules>
